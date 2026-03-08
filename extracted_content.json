@@ -1,0 +1,475 @@
+[
+  {
+    "slide_index": 0,
+    "text": "Freelancer Work Tracking & \nInvoice Management System\nA comprehensive web-based solution for efficient work management, time tracking, \nand invoicing",
+    "images": [
+      "img_0_7.png",
+      "img_0_21.png"
+    ]
+  },
+  {
+    "slide_index": 1,
+    "text": "Introduction\nCentralised Platform for Freelance Success\nThe Freelancer Work Tracking & Invoice Management System addresses the unique \nchallenges faced by independent professionals managing multiple clients and projects \nsimultaneously.\nThis centralised platform streamlines client management, project tracking, and \nautomated invoicing whilst providing powerful analytical insights into productivity and \nfinancial performance.\nBuilt with Django, Django REST Framework, and ReactJS, the system ensures secure \nauthentication, scalability, and an intuitive user experience.",
+    "images": [
+      "img_1_7.png",
+      "img_1_15.png"
+    ]
+  },
+  {
+    "slide_index": 2,
+    "text": "Problem Definition\nThe Freelancer's Dilemma\nInaccurate Time Tracking\nManual methods lead to missed billable \nhours and incorrect work records across \nmultiple projects\nDelayed Invoicing\nManual invoice creation increases \ncalculation errors and makes tracking \npayment status difficult\nPoor Financial Visibility\nSpreadsheets and disconnected tools \nprevent real-time analysis of earnings and \nproductivity trends\nFreelancers juggling multiple clients struggle with scattered tools, handwritten notes, and spreadsheets\u2014resulting in reduced productivity \nand missed revenue opportunities.",
+    "images": [
+      "img_2_8.png"
+    ]
+  },
+  {
+    "slide_index": 3,
+    "text": "Current Landscape: Existing Systems Fall Short\nManual Tracking Methods\nSpreadsheets, notebooks, and emails \ncreate fragmented workflows with no \ncentralised oversight of projects and \npayments\nTemplate-Based Invoicing\nWord processors and basic templates \nincrease risk of duplicate invoices, \ncalculation errors, and billing delays\nDisconnected Analytics\nAbsence of integrated reporting makes \nit nearly impossible to monitor \nproductivity, client profitability, or \nincome trends",
+    "images": [
+      "img_3_23.png"
+    ]
+  },
+  {
+    "slide_index": 4,
+    "text": "SOLUTION\nCore Functional Requirement\nUser & Client Management\nSecure registration, authentication, and comprehensive client database with \nediting capabilities\nProject & Task Tracking\nCreate projects with status monitoring, manage tasks with priority levels, and \ntrack progress in real time\nIntelligent Time Tracking\nStart, pause, and stop timers with manual entry options for accurate billable \nhour recording\nAutomated Invoicing\nGenerate professional invoices based on hourly rates or fixed pricing with \npayment status tracking\nComprehensive Reporting\nView earnings, time allocation, and project performance with client-wise and \nmonthly analytics\nAdmin Controls\nPlatform management including user administration, system monitoring, and \ndata maintenance",
+    "images": [
+      "img_4_7.png"
+    ]
+  },
+  {
+    "slide_index": 5,
+    "text": "SOLUTION\nCore Functional Requirement\nSmart Invoice Numbering & Versioning\nAutomatic invoice number generation (e.g.,\u00a0INV-2026-CLIENT01-0005)\nwith invoice revision history to track edits after invoice submission.\nWork Productivity Score\nDashboard-based productivity insights by comparing estimated\nhours with actual tracked hours, showing on-time task percentage\nand weekly productivity score.\nClient Trust Level / Rating System\nAutomatic client rating based on payment behavior such as on-time\npayments, delays, and overdue invoices to identify reliable and risky\nclients.\nAutomated Invoice Reminders\nSystem-generated invoice reminders sent before, on, and after the\ndue date through notifications and email alerts.\nSoft Delete & Archive System\nClients and projects are archived instead of permanently deleted,\nensuring data safety and easy recovery.\nMulti-Currency Invoice Support\nInvoice generation with selectable currency (INR, USD, EUR) and\nmanual conversion rate input for international clients.",
+    "images": []
+  },
+  {
+    "slide_index": 6,
+    "text": "Built for Performance & Reliability\nSecurity First\nJWT authentication ensures secure access and protected user data\nFast & Reliable\nOptimized performance with high availability and minimal downtime\nUser-Friendly Design\nResponsive interface accessible across all devices\nScalable Architecture\nModular design supports future growth and easy maintenance\nHigh accuracy in time tracking and invoice calculations ensures you never miss billable hours or make \ncostly errors\nCore Non-Functional Requirement",
+    "images": [
+      "img_6_20.png"
+    ]
+  },
+  {
+    "slide_index": 7,
+    "text": "TECHNICAL \nSPECIFICATIONS\nSystem Requirements\nHardware Requirements\n\u2022 Processor: Intel i3 or higher\n\u2022 RAM: Minimum 4 GB (8 GB recommended)\n\u2022 Storage: 50 GB free disc space\n\u2022 Display: 1366 \u00d7 768 resolution or higher\n\u2022 Connectivity: Stable internet connection\nSoftware Requirements\n\u2022 Operating System: Windows, macOS, or Linux\n\u2022 Backend: Django, Django REST Framework\n\u2022 Frontend: ReactJS\n\u2022 Database: MySQL\n\u2022 Web Server: Apache or Nginx\n\u2022 Browser: Chrome, Firefox (latest versions)",
+    "images": [
+      "img_7_7.png"
+    ]
+  },
+  {
+    "slide_index": 8,
+    "text": "Modern Technology Stack\nDjango Backend\nRobust Python framework powering secure, \nscalable server-side operations\nReactJS Frontend\nDynamic user interface with component-based \narchitecture for seamless interactions\nMSQL Database\nReliable relational database ensuring data \nintegrity and efficient queries\nThe combination of Django REST Framework for API development and ReactJS for the frontend delivers a modern, responsive application that \nfreelancers will love to use.",
+    "images": [
+      "img_8_18.png",
+      "img_8_19.png",
+      "img_8_20.png"
+    ]
+  },
+  {
+    "slide_index": 9,
+    "text": "SYSTEM ARCHITECTURE\nDetailed System Architecture\n Frontend Layer \u2013 ReactJS\n\u2022 Provides user interface for Freelancer and Admin \n\u2022 Handles API requests and displays data \n\u2022 Stores JWT token securely for authentication \nBackend Layer \u2013 Django & Django REST \nFramework\n\u2022 Handles business logic \n\u2022 Provides RESTful APIs \n\u2022 Manages authentication and authorization \n\u2022 Implements role-based access (Admin / Freelancer) \nDatabase Layer \u2013 MySQL\n\u2022 Stores user, client, project, task, and invoice data \n\u2022 Maintains relational integrity using foreign keys \nCommunication Flow:\nUser \u2192 React Frontend \u2192 REST API \u2192 MySQL \nDatabase \u2192 Response back to UI",
+    "images": [
+      "img_9_8.png",
+      "img_9_9.png",
+      "img_9_10.png"
+    ]
+  },
+  {
+    "slide_index": 10,
+    "text": "MODULE-WISE PROJECT \nBREAKDOWN\nAuthentication Module\n\u2022 User registration & login \n\u2022 JWT authentication \n\u2022 Role-based access \nAdmin Module\n\u2022 Manage user accounts \n\u2022 Activate / deactivate users \n\u2022 Monitor system usage \nClient Management Module\n\u2022 Add / edit / delete clients \n\u2022 View client-wise projects \n\u2022 Track client earnings \nProject Management Module\n\u2022 Create projects under client \n\u2022 Track project progress \n\u2022 Assign tasks",
+    "images": []
+  },
+  {
+    "slide_index": 11,
+    "text": "MODULE-WISE PROJECT \nBREAKDOWN\nTask Management Module\n\u2022 Add tasks \n\u2022 Update task status \n\u2022 Track estimated hours \nTime Tracking Module\n\u2022 Start / stop timer \n\u2022 Manual time entry \n\u2022 Auto total hour calculation \nInvoice Management Module\n\u2022 Auto-generate invoices \n\u2022 Track invoice status \n\u2022 PDF generation \nReports & Analytics Module\n\u2022 Monthly earnings \n\u2022 Paid vs unpaid invoices \n\u2022 Time reports",
+    "images": []
+  },
+  {
+    "slide_index": 12,
+    "text": "IMPAC\nT\nTransforming Freelance Work \nManagement\n100%\nAutomated Invoicing\nEliminate manual \ncalculations and billing \nerrors\n360\u00b0\nFinancial Visibility\nComplete oversight of \nearnings and payments\n24/7\nReal-Time Tracking\nMonitor time and tasks \nanytime, anywhere\nThis integrated solution empowers freelancers to focus on their craft whilst the \nsystem handles time tracking, invoicing, and financial management with precision \nand ease.",
+    "images": [
+      "img_12_16.png"
+    ]
+  },
+  {
+    "slide_index": 13,
+    "text": "USE CASE DIAGRAM",
+    "images": [
+      "img_13_7.png",
+      "img_13_18.png",
+      "img_13_19.png"
+    ]
+  },
+  {
+    "slide_index": 14,
+    "text": "SEQUENCE \nDIAGRAM",
+    "images": [
+      "img_14_8.png",
+      "img_14_15.jpeg"
+    ]
+  },
+  {
+    "slide_index": 15,
+    "text": "ER DIAGRAM",
+    "images": [
+      "img_15_7.jpeg",
+      "img_15_14.jpeg"
+    ]
+  },
+  {
+    "slide_index": 16,
+    "text": "Data Dictionary\nFreelancer Work Tracking & Invoice \nManagement System",
+    "images": [
+      "img_16_7.jpeg",
+      "img_16_14.jpeg"
+    ]
+  },
+  {
+    "slide_index": 17,
+    "text": "User \nTable\nConstraints \nPrimary \nKey\nField \nName \nid\nData Type \nBigAutoFiel\nd\nDescription \nUnique identifier for \neach user \nUsername for  \nauthentication \nUser email address \nEncrypted password \nUser first name \nUser last name \nUser role  \n(Admin/User)\nis_staff \nis_active \nlast_login \ndate_joined\nusername\nemail \npassword \nfirst_name \nlast_name \nrole\nBOOLEA\nN \nBOOLEA\nN \nDATETI\nVARCHAR(1\n50)\nEmailField(254\n) \nVARCHAR(1\n28) \nVARCHAR(1\n50) \nVARCHAR(1\n50) \nVARCHAR(2\n0)\nDEFAULT \nFALSE \nDEFAULT \nTRUE \nNULL\nUNIQUE, NOT \nNULL\nUNIQUE, NOT \nNULL \nNOT NULL \nNULL \nNULL \nDEFAULT 'user'\nAdmin panel access \nAccount active status \nLast login timestamp \nAccount creation \ndate\nis_superuser\nB O O L E\nAN\nD E F A U L T \nFALSE\nFull permission \naccess",
+    "images": [
+      "img_17_6.jpeg",
+      "img_17_12.png"
+    ]
+  },
+  {
+    "slide_index": 18,
+    "text": "Project \nTable\nConstraints\nField \nName\nData \nType\nDescription\ni\nd\ndescription\nTE\nXT\nBigAutoFiel\nd\nNU\nLL\nPrimary \nKey\nUnique project  \nidentifier \nProject name\nProject description\nname\ncreated_at\nowner_id\nDATETI\nME\nForeignKe\ny\nVARCHAR(2\n55)\nNOT \nNULL\nAUT\nOREFEREN\nCES  \nUser(id)\nProject creation \ntimestamp \nOwner of the  \nproject",
+    "images": [
+      "img_18_6.png",
+      "img_18_13.png"
+    ]
+  },
+  {
+    "slide_index": 19,
+    "text": "Task \nTable\nConstraints\nField \nName\nData \nType\nDescription\ni\nd\nis_completed\nBOOLE\nAN\nBigAutoFiel\nd\nPrimary \nKey\nDEFAULT \nFALSE\nUnique task  \nidentifier \nTask title\nTask \ncompletion  \nstatus Assigned \nuser\ntitle\nassigned_to\nproject_id\nForeignKe\nyForeignKe\ny\nVARCHAR(2\n55)\nNOT \nNULL\nNULL, \nREFERENCES \nUser(id) \nREFERENCES  \nProject(id)\nAssociated project",
+    "images": [
+      "img_19_6.png"
+    ]
+  },
+  {
+    "slide_index": 20,
+    "text": "Clients Table\nField\nType\nDescription\nclient_id\nINT (PK)\nClient identifier\nuser_id\nINT (FK)\nFreelancer ID\nclient_name\nVARCHAR\nClient name\nemail\nVARCHAR\nClient email\nphone\nVARCHAR\nContact number\naddress\nTEXT\nClient address",
+    "images": [
+      "img_20_6.png",
+      "img_20_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 21,
+    "text": "Time Logs Table\nField\nType\nDescription\ntime_log_id\nINT (PK)\nTime log ID\ntask_id\nINT (FK)\nTask ID\nstart_time\nDATETIME\nStart time\nend_time\nDATETIME\nEnd time\nduration\nFLOAT\nHours worked",
+    "images": [
+      "img_21_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 22,
+    "text": "Invoices Table\nField\nType\nDescription\ninvoice_id\nINT (PK)\nInvoice ID\nclient_id\nINT (FK)\nClient ID\ninvoice_date\nDATE\nInvoice date\ntotal_amount\nDECIMAL\nInvoice total\nstatus\nVARCHAR\nInvoice status",
+    "images": [
+      "img_22_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 23,
+    "text": "Payments Table\nField\nType\nDescription\npayment_id\nINT (PK)\nPayment ID\ninvoice_id\nINT (FK)\nInvoice ID\namount\nDECIMAL\nPaid amount\npayment_date\nDATE\nPayment date\npayment_method\nVARCHAR\nPayment mode",
+    "images": [
+      "img_23_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 24,
+    "text": "FWTS User Dashboard",
+    "images": [
+      "img_24_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 25,
+    "text": "",
+    "images": [
+      "img_25_6.jpeg",
+      "img_25_12.png"
+    ]
+  },
+  {
+    "slide_index": 26,
+    "text": "",
+    "images": [
+      "img_26_6.png",
+      "img_26_11.png"
+    ]
+  },
+  {
+    "slide_index": 27,
+    "text": "",
+    "images": [
+      "img_27_6.png",
+      "img_27_12.png"
+    ]
+  },
+  {
+    "slide_index": 28,
+    "text": "",
+    "images": [
+      "img_28_6.png",
+      "img_28_12.png"
+    ]
+  },
+  {
+    "slide_index": 29,
+    "text": "",
+    "images": [
+      "img_29_6.png",
+      "img_29_12.png"
+    ]
+  },
+  {
+    "slide_index": 30,
+    "text": "",
+    "images": [
+      "img_30_6.png",
+      "img_30_11.png"
+    ]
+  },
+  {
+    "slide_index": 31,
+    "text": "",
+    "images": [
+      "img_31_6.png",
+      "img_31_12.png"
+    ]
+  },
+  {
+    "slide_index": 32,
+    "text": "",
+    "images": [
+      "img_32_6.png",
+      "img_32_12.png"
+    ]
+  },
+  {
+    "slide_index": 33,
+    "text": "",
+    "images": [
+      "img_33_6.png",
+      "img_33_12.png"
+    ]
+  },
+  {
+    "slide_index": 34,
+    "text": "",
+    "images": [
+      "img_34_6.png",
+      "img_34_11.png"
+    ]
+  },
+  {
+    "slide_index": 35,
+    "text": "",
+    "images": [
+      "img_35_6.png",
+      "img_35_11.png"
+    ]
+  },
+  {
+    "slide_index": 36,
+    "text": "",
+    "images": [
+      "img_36_6.png",
+      "img_36_12.png"
+    ]
+  },
+  {
+    "slide_index": 37,
+    "text": "",
+    "images": [
+      "img_37_6.png",
+      "img_37_11.png"
+    ]
+  },
+  {
+    "slide_index": 38,
+    "text": "",
+    "images": [
+      "img_38_6.png",
+      "img_38_11.png"
+    ]
+  },
+  {
+    "slide_index": 39,
+    "text": "",
+    "images": [
+      "img_39_6.png",
+      "img_39_11.png"
+    ]
+  },
+  {
+    "slide_index": 40,
+    "text": "",
+    "images": [
+      "img_40_6.png",
+      "img_40_12.png"
+    ]
+  },
+  {
+    "slide_index": 41,
+    "text": "",
+    "images": [
+      "img_41_6.png",
+      "img_41_12.png"
+    ]
+  },
+  {
+    "slide_index": 42,
+    "text": "",
+    "images": [
+      "img_42_6.png",
+      "img_42_12.png"
+    ]
+  },
+  {
+    "slide_index": 43,
+    "text": "ADMIN Dashboard",
+    "images": [
+      "img_43_6.png",
+      "img_43_12.jpeg"
+    ]
+  },
+  {
+    "slide_index": 44,
+    "text": "",
+    "images": [
+      "img_44_6.jpeg",
+      "img_44_12.jpeg"
+    ]
+  },
+  {
+    "slide_index": 45,
+    "text": "",
+    "images": [
+      "img_45_6.jpeg",
+      "img_45_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 46,
+    "text": "",
+    "images": [
+      "img_46_6.jpeg",
+      "img_46_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 47,
+    "text": "",
+    "images": [
+      "img_47_6.jpeg",
+      "img_47_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 48,
+    "text": "",
+    "images": [
+      "img_48_6.jpeg",
+      "img_48_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 49,
+    "text": "",
+    "images": [
+      "img_49_6.jpeg",
+      "img_49_13.png"
+    ]
+  },
+  {
+    "slide_index": 50,
+    "text": "",
+    "images": [
+      "img_50_6.png",
+      "img_50_11.jpeg"
+    ]
+  },
+  {
+    "slide_index": 51,
+    "text": "",
+    "images": [
+      "img_51_6.jpeg",
+      "img_51_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 52,
+    "text": "",
+    "images": [
+      "img_52_6.jpeg",
+      "img_52_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 53,
+    "text": "",
+    "images": [
+      "img_53_6.jpeg",
+      "img_53_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 54,
+    "text": "Pending to Implement",
+    "images": [
+      "img_54_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 55,
+    "text": "",
+    "images": [
+      "img_55_11.jpeg"
+    ]
+  },
+  {
+    "slide_index": 56,
+    "text": "",
+    "images": [
+      "img_56_6.jpeg",
+      "img_56_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 57,
+    "text": "",
+    "images": [
+      "img_57_6.jpeg",
+      "img_57_13.png"
+    ]
+  },
+  {
+    "slide_index": 58,
+    "text": "",
+    "images": [
+      "img_58_6.png",
+      "img_58_11.jpeg"
+    ]
+  },
+  {
+    "slide_index": 59,
+    "text": "",
+    "images": [
+      "img_59_6.jpeg",
+      "img_59_13.jpeg"
+    ]
+  },
+  {
+    "slide_index": 60,
+    "text": "Technical Resources & Documentation\nDjango Framework\nhttps://docs.djangoproject.com\nComplete backend development documentation\nDjango REST Framework\nhttps://www.django-rest-framework.org\nAPI development and integration guides\nReactJS Library\nhttps://react.dev\nFrontend component library reference\nJSON Web Tokens\nhttps://jwt.io\nAuthentication standard specifications\nMSQL Database\nhttps://www.mysql.com/\nDatabase management documentation\nAdditional learning resources available through Stack Overflow, GeeksforGeeks, and Medium developer communities.",
+    "images": [
+      "img_60_6.jpeg"
+    ]
+  },
+  {
+    "slide_index": 61,
+    "text": "",
+    "images": []
+  }
+]

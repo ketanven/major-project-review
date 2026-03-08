@@ -1,1 +1,602 @@
-<!doctype html><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Keynote</title><meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,width=device-width"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body id="body" bgcolor="black"><div id="stageArea"><div id="stage" class="stage"></div><div id="hyperlinkPlane" class="stage"></div></div><div id="slideshowNavigator"></div><div id="slideNumberControl"></div><div id="slideNumberDisplay"></div><div id="helpPlacard"></div><div id="waitingIndicator"><div id="waitingSpinner"></div></div><script src="assets/player/main.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Work Tracking System | Project Presentation</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#0f172a', /* slate-900 */
+                        card: '#1e293b', /* slate-800 */
+                        primary: '#3b82f6', /* blue-500 */
+                        accent: '#8b5cf6', /* violet-500 */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f1f5f9; /* slate-100 */
+            overflow-x: hidden;
+        }
+
+        /* Ambient Background Gradients */
+        .bg-gradient-radial {
+            background: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+
+        /* Fade-in Animation Classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Navigation Dots */
+        .nav-dot {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 rgba(79, 70, 229, 0);
+        }
+        
+        .nav-dot.active {
+            background-color: #8b5cf6;
+            transform: scale(1.5);
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            z-index: 100;
+            width: 0%;
+            transition: width 0.1s ease;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+    <div id="progress-bar"></div>
+
+    <!-- Side Navigation -->
+    <nav class="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 hidden lg:flex flex-col gap-3" id="side-nav">
+        <!-- Dots generated via JS -->
+    </nav>
+
+    <main>
+
+        <!-- 1. Title Slide -->
+        <section id="section-1" class="relative group">
+            <div class="absolute inset-0 bg-gradient-radial opacity-70"></div>
+            <div class="glass-card max-w-4xl mx-auto p-12 rounded-3xl text-center relative z-10 fade-in-section shadow-2xl">
+                <div class="inline-block px-4 py-1 mb-6 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold tracking-wide border border-blue-500/30">
+                    SILVER OAK COLLEGE OF COMPUTER APPLICATION
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 leading-tight pb-2">
+                    Freelancer Work Tracking &<br>Invoice Management System
+                </h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                    A comprehensive web-based solution for efficient work management, time tracking, and invoicing.
+                </p>
+                <div class="mt-12 flex justify-center gap-4">
+                    <a href="#section-2" class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-medium transition duration-300 shadow-lg shadow-blue-500/25">
+                        Explore Project
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 2. Problem Statement -->
+        <section id="section-2">
+            <div class="max-w-6xl mx-auto w-full fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Problem Statement</h2>
+                    <p class="text-slate-400 text-lg">The Freelancer's Dilemma</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y--2 transition-transform duration-300">
+                        <div class="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 border border-red-500/30 text-red-400 text-2xl">
+                            ⏱️
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Inaccurate Time Tracking</h3>
+                        <p class="text-slate-400 leading-relaxed">Manual methods lead to missed billable hours and incorrect work records across multiple projects.</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y--2 transition-transform duration-300">
+                        <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 border border-yellow-500/30 text-yellow-400 text-2xl">
+                            📄
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Delayed Invoicing</h3>
+                        <p class="text-slate-400 leading-relaxed">Manual invoice creation increases calculation errors and makes tracking payment status difficult.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card p-8 rounded-2xl hover:translate-y--2 transition-transform duration-300">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-6 border border-orange-500/30 text-orange-400 text-2xl">
+                            📉
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white">Poor Financial Visibility</h3>
+                        <p class="text-slate-400 leading-relaxed">Spreadsheets and disconnected tools prevent real-time analysis of earnings and productivity trends.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 glass-card p-6 rounded-xl text-center text-slate-300 border-l-4 border-l-red-500 italic">
+                    "Freelancers juggling multiple clients struggle with scattered tools, handwritten notes, and spreadsheets—resulting in reduced productivity and missed revenue opportunities."
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. Project Objective -->
+        <section id="section-3" class="relative">
+            <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-radial opacity-30 pointer-events-none"></div>
+            <div class="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center gap-12 fade-in-section">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">Project Objective</h2>
+                    <p class="text-xl text-blue-400 mb-8">A Centralised Platform for Freelance Success.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent mt-1">✦</span>
+                            <span class="text-slate-300 text-lg">Streamline client and project management into a single centralized platform.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent mt-1">✦</span>
+                            <span class="text-slate-300 text-lg">Automate time tracking to ensure accurate billable hours and prevent revenue loss.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent mt-1">✦</span>
+                            <span class="text-slate-300 text-lg">Generate professional, error-free invoices instantly with multi-currency support.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-accent mt-1">✦</span>
+                            <span class="text-slate-300 text-lg">Provide powerful analytical insights into productivity and financial performance.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
+                        <h3 class="text-2xl font-semibold mb-6">The Goal</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            To empower independent professionals by replacing fragmented workflows (spreadsheets, notebooks) with an integrated solution, allowing freelancers to focus on their craft whilst the system handles administration with precision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. System Overview -->
+        <section id="section-4">
+            <div class="max-w-5xl mx-auto w-full text-center fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">System Overview</h2>
+                <p class="text-xl text-slate-400 mb-12 max-w-3xl mx-auto">
+                    The platform bridges the gap between project execution and financial management.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
+                        <div class="text-4xl mb-4">👥</div>
+                        <h4 class="font-semibold text-lg text-white">Client Hub</h4>
+                        <p class="text-sm text-slate-400 text-center mt-2">Manage all client relationships and ratings.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
+                        <div class="text-4xl mb-4">📁</div>
+                        <h4 class="font-semibold text-lg text-white">Project Tracker</h4>
+                        <p class="text-sm text-slate-400 text-center mt-2">Organize tasks and monitor real-time progress.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
+                        <div class="text-4xl mb-4">⏱️</div>
+                        <h4 class="font-semibold text-lg text-white">Time Manager</h4>
+                        <p class="text-sm text-slate-400 text-center mt-2">Log hours accurately with integrated timers.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl flex flex-col items-center">
+                        <div class="text-4xl mb-4">💳</div>
+                        <h4 class="font-semibold text-lg text-white">Billing Engine</h4>
+                        <p class="text-sm text-slate-400 text-center mt-2">Generate automated invoices and track payments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 5. Features of the System -->
+        <section id="section-5">
+            <div class="max-w-7xl mx-auto w-full fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Core Features</h2>
+                    <p class="text-slate-400 text-lg">Everything you need to run a freelance business.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-blue-500">
+                        <h3 class="text-xl font-bold mb-2">User & Client Management</h3>
+                        <p class="text-slate-400 text-sm">Secure registration, authentication, and comprehensive client database with editing capabilities.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-purple-500">
+                        <h3 class="text-xl font-bold mb-2">Project & Task Tracking</h3>
+                        <p class="text-slate-400 text-sm">Create projects with status monitoring, manage tasks with priority levels, and track progress.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-pink-500">
+                        <h3 class="text-xl font-bold mb-2">Intelligent Time Tracking</h3>
+                        <p class="text-slate-400 text-sm">Start, pause, and stop timers with manual entry options for accurate billable hour recording.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-green-500">
+                        <h3 class="text-xl font-bold mb-2">Automated Invoicing</h3>
+                        <p class="text-slate-400 text-sm">Generate professional invoices based on hourly rates or fixed pricing, with auto-numbering and smart versioning.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-yellow-500">
+                        <h3 class="text-xl font-bold mb-2">Work Productivity Score</h3>
+                        <p class="text-slate-400 text-sm">Dashboard insights comparing estimated hours with actuals, showing on-time percentages.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl hover:bg-slate-800/80 transition-colors border-t-4 border-t-indigo-500">
+                        <h3 class="text-xl font-bold mb-2">Multi-Currency & Reminders</h3>
+                        <p class="text-slate-400 text-sm">Invoice generation with selectable currency and system-generated email reminders for due payments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 6. System Architecture -->
+        <section id="section-6">
+            <div class="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 fade-in-section">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">System Architecture</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="glass-card p-5 rounded-xl border-l-4 border-blue-500">
+                            <h3 class="font-bold text-lg text-white mb-1">Frontend Layer (ReactJS)</h3>
+                            <p class="text-slate-400 text-sm">Provides interface for Freelancer/Admin, handles API requests, and stores secure JWT tokens.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl border-l-4 border-green-500">
+                            <h3 class="font-bold text-lg text-white mb-1">Backend Layer (Django REST)</h3>
+                            <p class="text-slate-400 text-sm">Handles robust business logic, RESTful API endpoints, and role-based access control.</p>
+                        </div>
+                        <div class="glass-card p-5 rounded-xl border-l-4 border-orange-500">
+                            <h3 class="font-bold text-lg text-white mb-1">Database Layer (MySQL)</h3>
+                            <p class="text-slate-400 text-sm">Maintains relational integrity for users, clients, projects, tasks, and invoices.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-slate-800/50 rounded-lg text-sm text-center text-slate-300 font-mono">
+                        User → React UI → REST API → MySQL → Response
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 rounded-2xl overflow-hidden glass-card p-4">
+                    <div class="text-center text-slate-400 text-sm mb-2 font-semibold tracking-wider">ENTITY RELATIONSHIP DIAGRAM</div>
+                    <img src="extracted_assets/img_15_7.jpeg" alt="ER Diagram" class="w-full h-auto rounded-lg object-contain bg-slate-900/50 mix-blend-screen" style="max-height: 500px;">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 7. Screenshots / UI Demonstration -->
+        <section id="section-7" class="py-24">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="text-center mb-20 fade-in-section">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Platform Interface</h2>
+                    <p class="text-slate-400 text-lg">Clean, intuitive, and designed for productivity.</p>
+                </div>
+                
+                
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-24 fade-in-section">
+                <div class="w-full md:w-2/3 glass-card p-2 rounded-xl shadow-2xl">
+                    <img src="extracted_assets/img_24_6.jpeg" alt="UI Screenshot 1" class="w-full h-auto rounded-lg rounded-xl opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">01</div>
+                    <h3 class="text-2xl font-bold mb-3">Freelancer Main Dashboard</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Overview of productivity and recent invoices.</p>
+                </div>
+            </div>
+        
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24 fade-in-section">
+                <div class="w-full md:w-2/3 glass-card p-2 rounded-xl shadow-2xl">
+                    <img src="extracted_assets/img_25_6.jpeg" alt="UI Screenshot 2" class="w-full h-auto rounded-lg rounded-xl opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">02</div>
+                    <h3 class="text-2xl font-bold mb-3">Project Management</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Viewing tasks grouped by client projects.</p>
+                </div>
+            </div>
+        
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-24 fade-in-section">
+                <div class="w-full md:w-2/3 glass-card p-2 rounded-xl shadow-2xl">
+                    <img src="extracted_assets/img_26_6.png" alt="UI Screenshot 3" class="w-full h-auto rounded-lg rounded-xl opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">03</div>
+                    <h3 class="text-2xl font-bold mb-3">Time Tracker Interface</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Active timer logging billable hours.</p>
+                </div>
+            </div>
+        
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 mb-24 fade-in-section">
+                <div class="w-full md:w-2/3 glass-card p-2 rounded-xl shadow-2xl">
+                    <img src="extracted_assets/img_43_6.png" alt="UI Screenshot 4" class="w-full h-auto rounded-lg rounded-xl opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">04</div>
+                    <h3 class="text-2xl font-bold mb-3">Admin Dashboard</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">System wide oversight and user management.</p>
+                </div>
+            </div>
+        
+            <div class="flex flex-col md:flex-row items-center gap-8 mb-24 fade-in-section">
+                <div class="w-full md:w-2/3 glass-card p-2 rounded-xl shadow-2xl">
+                    <img src="extracted_assets/img_44_6.jpeg" alt="UI Screenshot 5" class="w-full h-auto rounded-lg rounded-xl opacity-90 hover:opacity-100 transition duration-300">
+                </div>
+                <div class="w-full md:w-1/3">
+                    <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold mb-4">05</div>
+                    <h3 class="text-2xl font-bold mb-3">Invoice Generator</h3>
+                    <p class="text-slate-400 text-lg leading-relaxed">Creating professional invoices with itemized tasks.</p>
+                </div>
+            </div>
+        
+            </div>
+        </section>
+
+
+        <!-- 8. Technology Stack -->
+        <section id="section-8">
+            <div class="max-w-5xl mx-auto w-full text-center fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-12">Technology Stack</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Backend -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-green-500/10 rounded-full blur-3xl group-hover:bg-green-500/20 transition-all duration-500"></div>
+                        <h3 class="text-xl text-green-400 font-bold mb-6 tracking-wide">BACKEND</h3>
+                        <div class="text-5xl mb-4 font-bold text-white">Django</div>
+                        <p class="text-slate-400 font-medium">Django REST Framework</p>
+                        <p class="mt-4 text-sm text-slate-500">Robust Python framework powering secure, scalable server-side operations and RESTful APIs.</p>
+                    </div>
+                    
+                    <!-- Frontend -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+                        <h3 class="text-xl text-blue-400 font-bold mb-6 tracking-wide">FRONTEND</h3>
+                        <div class="text-5xl mb-4 font-bold text-white">ReactJS</div>
+                        <p class="text-slate-400 font-medium">Tailwind CSS</p>
+                        <p class="mt-4 text-sm text-slate-500">Dynamic user interface with component-based architecture for seamless interactions.</p>
+                    </div>
+                    
+                    <!-- Database -->
+                    <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-orange-500/10 rounded-full blur-3xl group-hover:bg-orange-500/20 transition-all duration-500"></div>
+                        <h3 class="text-xl text-orange-400 font-bold mb-6 tracking-wide">DATABASE</h3>
+                        <div class="text-5xl mb-4 font-bold text-white">MySQL</div>
+                        <p class="text-slate-400 font-medium">Relational Database</p>
+                        <p class="mt-4 text-sm text-slate-500">Reliable relational database ensuring data integrity and efficient, complex queries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 9. Workflow / Process -->
+        <section id="section-9">
+            <div class="max-w-4xl mx-auto w-full fade-in-section">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Freelancer Workflow</h2>
+                    <p class="text-slate-400 text-lg">A seamless end-to-end process.</p>
+                </div>
+                
+                <div class="relative border-l-2 border-slate-700 ml-6 md:ml-12 space-y-12">
+                    <div class="relative">
+                        <div class="absolute -left-[45px] bg-slate-900 border-2 border-primary text-primary w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                        <div class="glass-card p-6 rounded-xl ml-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Onboard Client & Define Project</h3>
+                            <p class="text-slate-400">Add the client details and create a project container with specific hourly rates or fixed budgets.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute -left-[45px] bg-slate-900 border-2 border-accent text-accent w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                        <div class="glass-card p-6 rounded-xl ml-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Create & Execute Tasks</h3>
+                            <p class="text-slate-400">Break the project into tasks, estimate hours, and start the integrated timer while working.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[45px] bg-slate-900 border-2 border-pink-500 text-pink-500 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                        <div class="glass-card p-6 rounded-xl ml-4">
+                            <h3 class="text-xl font-bold text-white mb-2">Generate Invoice & Get Paid</h3>
+                            <p class="text-slate-400">Automatically pull tracked hours into an itemized, beautifully formatted invoice and send to the client.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 10. Advantages -->
+        <section id="section-10">
+            <div class="max-w-6xl mx-auto w-full text-center fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-bold mb-16">System Impact</h2>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-lg shadow-blue-500/10 border-t-4 border-t-blue-500">
+                        <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600 mb-4">100%</div>
+                        <h3 class="text-xl font-bold mb-3">Automated Invoicing</h3>
+                        <p class="text-slate-400">Eliminate manual calculations and costly billing errors.</p>
+                    </div>
+                    
+                    <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-lg shadow-purple-500/10 border-t-4 border-t-purple-500">
+                        <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-purple-600 mb-4">360°</div>
+                        <h3 class="text-xl font-bold mb-3">Financial Visibility</h3>
+                        <p class="text-slate-400">Complete oversight of gross earnings, taxes, and pending payments.</p>
+                    </div>
+                    
+                    <div class="glass-card p-10 rounded-3xl hover:-translate-y-2 transition duration-300 shadow-lg shadow-pink-500/10 border-t-4 border-t-pink-500">
+                        <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-pink-600 mb-4">24/7</div>
+                        <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
+                        <p class="text-slate-400">Monitor time, tasks, and productivity scores anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 11. Future Improvements -->
+        <section id="section-11">
+            <div class="max-w-4xl mx-auto w-full fade-in-section">
+                <div class="glass-card p-12 rounded-3xl relative overflow-hidden">
+                    <div class="absolute right-0 bottom-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8">Future Enhancements</h2>
+                    <ul class="grid md:grid-cols-2 gap-4">
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> Payment Gateway Integration
+                        </li>
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> Mobile Application (React Native)
+                        </li>
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> AI-based Income Forecasting
+                        </li>
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> Expense Tracking Module
+                        </li>
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> Third-party integrations (Trello, Slack)
+                        </li>
+                        <li class="flex items-center gap-3 bg-slate-800/50 p-4 rounded-lg">
+                            <span class="text-green-400">➔</span> Tax Calculation Assistance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 12. Conclusion -->
+        <section id="section-12" class="text-center relative">
+            <div class="absolute inset-0 bg-gradient-radial opacity-50"></div>
+            <div class="max-w-3xl mx-auto w-full relative z-10 fade-in-section">
+                <div class="w-20 h-20 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-blue-500/40 transform rotate-12 hover:rotate-0 transition duration-300">
+                    <span class="text-4xl">🚀</span>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">Ready to Scale</h2>
+                <p class="text-xl text-slate-300 mb-10 leading-relaxed">
+                    This integrated solution empowers freelancers to focus entirely on their craft whilst the system handles time tracking, invoicing, and financial administration with precision and ease.
+                </p>
+                <p class="text-slate-500 text-lg uppercase tracking-widest font-semibold">Thank You for your attention</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 text-slate-600 text-sm border-t border-slate-800 bg-slate-900">
+        &copy; 2026 Freelancer Work Tracking & Invoice Management System | Project Presentation
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Progress Bar & Scroll Spy
+        const sections = document.querySelectorAll('section');
+        const sideNav = document.getElementById('side-nav');
+        
+        // Generate Nav Dots
+        sections.forEach((sec, i) => {
+            const dot = document.createElement('a');
+            dot.href = `#${sec.id}`;
+            dot.className = 'nav-dot w-3 h-3 rounded-full bg-slate-600 hover:bg-slate-400 block cursor-pointer';
+            dot.title = `Section ${i + 1}`;
+            sideNav.appendChild(dot);
+        });
+        
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        window.addEventListener('scroll', () => {
+            // Update Progress Bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+
+            // Update Active Nav Dot
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 300) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navDots.forEach((dot, idx) => {
+                dot.classList.remove('active');
+                if (dot.getAttribute('href') === `#${current}`) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize active dot on load
+        if(navDots.length > 0) navDots[0].classList.add('active');
+
+        // Fade-in Animation Observer
+        const fadeElements = document.querySelectorAll('.fade-in-section');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop observing once faded in
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
